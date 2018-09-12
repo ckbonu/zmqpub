@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "title": "Publish zmq message",
   "type": "flogo:activity",
-  "ref": "github.com/zmqpub",
+  "ref": "github.com/ckbonu/zmqpublish",
   "description": "Publish a message to a ZMQ topic",
   "author": "Krishna Chaitanya<krishna.c@isteer.com>",
   "input":[
