@@ -1,0 +1,32 @@
+{
+  "name": "KC-zmqpub",
+  "version": "0.0.1",
+  "title": "Publish zmq message",
+  "type": "flogo:activity",
+  "ref": "github.com/zmqpub",
+  "description": "Publish a message to a ZMQ topic",
+  "author": "Krishna Chaitanya<krishna.c@isteer.com>",
+  "input":[
+    {
+      "name": "URI",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "Topic",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "Message",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "output": [
+    {
+      "name": "output",
+      "type": "any"
+    }
+  ]
+}
