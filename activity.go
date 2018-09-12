@@ -4,6 +4,7 @@ import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"
 	"github.com/TIBCOSoftware/flogo-lib/logger"
 	zmq "github.com/alecthomas/gozmq"
+	zmq "github.com/pebbe/zmq3"
 )
 
 const (
