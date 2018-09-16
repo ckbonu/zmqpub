@@ -64,6 +64,6 @@ func (a *MyActivity) Eval(context activity.Context) (done bool, err error) {
 
 	logger.Debugf("Timestamp of the publish response: [%v]", res.Timestamp)
 
-	context.SetOutput(ovoutput, status.syncservice)
+	context.SetOutput(ovoutput, "OK")
 	return true, nil
 }
