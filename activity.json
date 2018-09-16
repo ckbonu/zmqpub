@@ -1,5 +1,5 @@
 {
-  "name": "KC-zmqpub",
+  "name": "zmqpub",
   "version": "0.0.1",
   "title": "Publish zmq message",
   "type": "flogo:activity",
