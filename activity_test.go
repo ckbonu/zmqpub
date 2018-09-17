@@ -1,14 +1,14 @@
 package zmqpub
 
 import (
-"io/ioutil"
-"log"
-"testing"
+	"io/ioutil"
+	"log"
+	"testing"
 
-
-"github.com/TIBCOSoftware/flogo-lib/core/activity"
-"github.com/TIBCOSoftware/flogo-contrib/action/flow/test"
 	"fmt"
+
+	"github.com/TIBCOSoftware/flogo-contrib/action/flow/test"
+	"github.com/TIBCOSoftware/flogo-lib/core/activity"
 )
 
 var activityMetadata *activity.Metadata
@@ -17,7 +17,7 @@ func getActivityMetadata() *activity.Metadata {
 
 	if activityMetadata == nil {
 		jsonMetadataBytes, err := ioutil.ReadFile("activity.json")
-		if err != nil{
+		if err != nil {
 			panic("No Json Metadata found for activity.json path")
 		}
 
@@ -37,7 +37,7 @@ func TestCreate(t *testing.T) {
 		return
 	}
 	log.Println("Test create successful")
-	}
+}
 
 func TestEval(t *testing.T) {
 
@@ -52,11 +52,11 @@ func TestEval(t *testing.T) {
 	tc := test.NewTestActivityContext(getActivityMetadata())
 
 	//setup attrs
-    tc.SetInput("URI","tcp:localhost:5555")
+	tc.SetInput("URI", "tcp://localhost:5555")
 	tc.SetInput("Topic", "zmq.REP")
 	tc.SetInput("Message", "testing zmq server for flogo")
 	act.Eval(tc)
-	log.Printf("TestEval successful output [%d]", tc.GetOutput("output") )
+	log.Printf("TestEval successful output [%d]", tc.GetOutput("output"))
 
 	result := tc.GetOutput("result")
 	fmt.Printf("[%s]", result)
